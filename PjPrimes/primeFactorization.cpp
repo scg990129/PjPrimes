@@ -91,21 +91,43 @@ void primeFactorization::first125000PrimeNum(long long list[], int length){
 
 void primeFactorization::primeTest(long long num, long long list[], int length,
                                    bool& primeNum, int& firstPrimeFactIndex){
-
+    if(list[firstPrimeFactIndex] > 0 &&
+       firstPrimeFactIndex <= length
+       ){
+        if (num % list[firstPrimeFactIndex] == 0){
+            primeNum = false; // default true
+            return;
+        }
+        if(list[firstPrimeFactIndex] * list[firstPrimeFactIndex] > num){
+            return; // primeNum = true;
+        }
+            
+        this->primeTest(num, list, length, primeNum, ++firstPrimeFactIndex);
+    }
 }
 
 bool primeFactorization::isPrime(long long number){
     if (abs(number) < 2){
         return false;
     }
-    for(auto prime: this->first125000Primes){
-        if(abs(number) % prime == 0){
-            return false;
-        }
-        if(prime * prime > abs(number)){
-            return true;
-        }
-    }
-    return true;
+    
+    bool primeNum = true;// default true
+    int index = 0;
+    long long temp = abs(this->getNum());
+    this->primeTest(abs(number), this->first125000Primes,
+                    temp < 125000 && temp >= 2 ? temp : 125000,
+                    primeNum,
+                    index
+                    );
+    // correct
+//    for(auto prime: this->first125000Primes){
+//        if(abs(number) % prime == 0){
+//            return false;
+//        }
+//        if(prime * prime > abs(number)){
+//            return true;
+//        }
+//    }
+    return primeNum;
 }
 
