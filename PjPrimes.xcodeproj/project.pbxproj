@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A3ED18F2AC7EEED00CE3A5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A3ED18E2AC7EEED00CE3A5E /* main.cpp */; };
+		4A6B3F402AC8E92F00FB978C /* integerManipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B3F3E2AC8E92F00FB978C /* integerManipulation.cpp */; };
+		4A6B3F432AC8E9CB00FB978C /* primeFactorization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B3F412AC8E9CB00FB978C /* primeFactorization.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		4A3ED18B2AC7EEED00CE3A5E /* PjPrimes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PjPrimes; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3ED18E2AC7EEED00CE3A5E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4A6B3F3E2AC8E92F00FB978C /* integerManipulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = integerManipulation.cpp; sourceTree = "<group>"; };
+		4A6B3F3F2AC8E92F00FB978C /* integerManipulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = integerManipulation.hpp; sourceTree = "<group>"; };
+		4A6B3F412AC8E9CB00FB978C /* primeFactorization.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = primeFactorization.cpp; sourceTree = "<group>"; };
+		4A6B3F422AC8E9CB00FB978C /* primeFactorization.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = primeFactorization.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				4A3ED18E2AC7EEED00CE3A5E /* main.cpp */,
+				4A6B3F3E2AC8E92F00FB978C /* integerManipulation.cpp */,
+				4A6B3F3F2AC8E92F00FB978C /* integerManipulation.hpp */,
+				4A6B3F412AC8E9CB00FB978C /* primeFactorization.cpp */,
+				4A6B3F422AC8E9CB00FB978C /* primeFactorization.hpp */,
 			);
 			path = PjPrimes;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6B3F432AC8E9CB00FB978C /* primeFactorization.cpp in Sources */,
 				4A3ED18F2AC7EEED00CE3A5E /* main.cpp in Sources */,
+				4A6B3F402AC8E92F00FB978C /* integerManipulation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
