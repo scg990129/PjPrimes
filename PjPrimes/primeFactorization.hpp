@@ -19,7 +19,7 @@ public:
      //Function to output the prime factorization of num
      //Postcondition: Prime factorization of num is printed;
 
-   void setNum(long long number); //new
+//   void setNum(long long number); //new
    primeFactorization(long long n = 0);
      //Constructor with a default parameter.
      //The instance variables of the base class are set according
@@ -30,7 +30,7 @@ public:
      //    first125000Primes = first 125000 prime numbers.
 
 private:
-   long long first125000Primes[125000];
+   long long first125000Primes[125000]; // 1655131
 
    void primeFact(long long num, long long list[], int length,
                   int firstPrimeFactIndex);

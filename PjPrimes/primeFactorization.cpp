@@ -14,17 +14,10 @@
 #include <cmath>
 
 primeFactorization::primeFactorization(long long n): integerManipulation(n) {
-    long long temp = abs(n);
+//    long long temp = abs(n);
     this->first125000PrimeNum(this->first125000Primes,
-                              temp < 125000 && temp >= 2 ? temp : 125000
-                              );
-}
-
-void primeFactorization::setNum(long long number){
-    integerManipulation::setNum(number);
-    long long temp = abs(number);
-    this->first125000PrimeNum(this->first125000Primes,
-                              temp < 125000 && temp >= 2 ? temp : 125000
+                              125000
+//                              temp < 125000 && temp >= 2 ? temp : 125000
                               );
 }
 
@@ -39,9 +32,9 @@ void primeFactorization::factorization(){
     if(isPrime){
         printf("%lli\n", this->getNum());
     }else{
-        long long temp = abs(this->getNum());
-        this->primeFact(this->getNum(), this->first125000Primes,
-                        temp < 125000 && temp >= 2 ? temp : 125000,
+//        long long temp = abs(this->getNum());
+        this->primeFact(this->getNum(), this->first125000Primes, 125000,
+//                        temp < 125000 && temp >= 2 ? temp : 125000,
                         0
                         );
         
@@ -51,7 +44,7 @@ void primeFactorization::factorization(){
 
 void primeFactorization::primeFact(long long num, long long list[], int length,
                                    int firstPrimeFactIndex){
-    if (num != 1 && firstPrimeFactIndex <= length){
+    if (num != 1 && firstPrimeFactIndex < length){
         if (num % list[firstPrimeFactIndex] == 0){
             printf("%lli ", list[firstPrimeFactIndex]);
             this->primeFact(num/list[firstPrimeFactIndex], list, length, firstPrimeFactIndex);
@@ -113,9 +106,9 @@ bool primeFactorization::isPrime(long long number){
     
     bool primeNum = true;// default true
     int index = 0;
-    long long temp = abs(this->getNum());
-    this->primeTest(abs(number), this->first125000Primes,
-                    temp < 125000 && temp >= 2 ? temp : 125000,
+//    long long temp = abs(this->getNum());
+    this->primeTest(abs(number), this->first125000Primes, 125000,
+//                    temp < 125000 && temp >= 2 ? temp : 125000,
                     primeNum,
                     index
                     );

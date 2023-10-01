@@ -45,15 +45,20 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
 
-    printf("Enter an integer between 2 and 270,000,000,000,000: ");
-    long long i;
-    cin >> i;
-    //long long primes[125000];
-    primeFactorization pf(i);
-    //pf.first125000PrimeNum(primes, 125000);
-    pf.factorization();
-    
-    std::cout << std::endl;
+    primeFactorization pf;
+
+    while(true){
+        printf("Enter an integer between 2 and 270,000,000,000,000: ");
+        long long i;
+        cin >> i;
+        //long long primes[125000];
+            // 1655131 * 1655131 = 2739458627161 ( 2,739,458,627,161 )
+        pf.setNum(i);
+        //pf.first125000PrimeNum(primes, 125000);
+        pf.factorization();
+
+        std::cout << std::endl;
+    }
     
     return 0;
 };
